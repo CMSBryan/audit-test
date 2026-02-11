@@ -30,7 +30,7 @@ jobs:
           echo "Found $COUNT approvals."
 
           # If function for reviews
-          if [ "$COUNT" -eq 0]; then
+          if [ "$COUNT" -eq 0 ]; then
             echo "::error::Warning, No PR approvals."
             exit 1
           else
