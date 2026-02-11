@@ -24,7 +24,7 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           echo "Checking reviews for PR #$PR_NUM in $REPO"
-          #  Get count of reviews
+          # Get count of reviews
           COUNT=$(gh api repos/$REPO/pulls/$PR_NUM/reviews --jq '[.[] | select(.state=="APPROVED")] | length')
 
           echo "Found $COUNT approvals."
