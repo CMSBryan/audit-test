@@ -22,6 +22,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUM: ${{ github.event.pull_request.number }}
           REPO: ${{ github.repository }}
+          SLACK_URL: ${{ secrets.SLACK_WEBHOOK }}
         run: |
           echo "Checking reviews for PR #$PR_NUM in $REPO"
           # Get count of reviews
