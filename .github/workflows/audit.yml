@@ -35,7 +35,7 @@ jobs:
             echo "::error::Warning, No PR approvals."
             # This sends a red alert with a clickable link to the PR
             curl -X POST -H 'Content-type: application/json' \
-              --data '{"text":"🚨 *Security Violation!* \nPR #'"$PR_NUM"' in *'"$REPO"'* was merged without approval! \n<https://github.com/'"$REPO"'/pull/'"$PR_NUM"'|View PR>"}' \
+              --data '{"text":"🚨 *Alert!* \nPR #'"$PR_NUM"' in *'"$REPO"'* was merged without approval! \n<https://github.com/'"$REPO"'/pull/'"$PR_NUM"'|View PR>"}' \
               "$SLACK_URL"
             exit 1
           else
